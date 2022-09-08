@@ -1,6 +1,6 @@
 # threaded-ia-downloader
 Threaded Internet Archive Downloader with Web interface.
-#Install instructions
+**Install instructions**
 This requires some basic linux knowledge!!!
 
 Upload the python script including the views folder to /home/$USER/iathreaded/

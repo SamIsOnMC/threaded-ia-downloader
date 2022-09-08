@@ -20,31 +20,20 @@ nano iathreaded.service
 Put this in:
 
 [Unit]
-
 Description=Threaded internet archive downloader.
-
 After=network.target
 
-
 StartLimitIntervalSec=0
-
 [Service]
-
 Type=simple
-
 Restart=always
-
 RestartSec=1
-
 User=[PUT USERNAME HERE]
-
 WorkingDirectory=/home/[put username here]/iathreaded
-
 ExecStart=python3 archive.py
 
 
 [Install]
-
 WantedBy=multi-user.target
 
 

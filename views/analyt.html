@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="index.css">
+<div id="box">
+    
+</div>
+<div class="undertext">
+    file(s) downloaded.
+</div>
+<script>
+
+const Http = new XMLHttpRequest();
+const url='/api/files';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  document.getElementById("box").innerHTML = "<h1>" + Http.responseText + "</h1>"
+}
+</script>

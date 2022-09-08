@@ -13,6 +13,8 @@ cd iathreaded/
 
 pip install -r requirements.txt
 
+Change iathreaded.service to your liking. (replace usernames)
+
 sudo mv iathreaded.service /etc/systemd/system
 
 sudo systemctl daemon-reload

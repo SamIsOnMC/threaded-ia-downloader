@@ -1,0 +1,14 @@
+[Unit]
+Description=IaThreaded
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=PUT USERNAME HERE
+WorkingDirectory=/home/PUT USERNAME HERE/iathreaded
+ExecStart=python3 archive.py
+
+[Install]
+WantedBy=multi-user.target

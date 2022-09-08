@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="index.css">
+<nav>
+    <ul>
+      <li onclick="goToAnaly()">
+        Analytics
+        <span></span><span></span><span></span><span></span>
+      </li>
+      <li onclick="download()">
+        Download
+        <span></span><span></span><span></span><span></span>
+      </li>
+    </ul>
+  </nav>
+<script>
+    function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+    function goToAnaly(){
+        document.location.href = "analy"
+    }
+    function download(){
+        var toDir = prompt('Directory to download all files in. (Remote server) Cant contain spaces.')
+        var maxThr = prompt('Max threads? Recommended: 20')
+        var Args = prompt('Arguments. Type help to view all args')
+        if(Args == "help"){
+            alert('collection:COLLECTIONNAMEHERE to download an entire collection.\nsubject:"SUBJECT_HERE" to filter out an collection or to search for that subject on ia.\nidentifier:"id_name" to download one ia package. WARNING: Set max threads to 1.')
+            var Args = prompt('Arguments')
+        }
+        httpGet('api/download?toDir=' + toDir + "&maxThr=" + maxThr + "&args=" + Args)
+        alert('Should start downloading. Please check server console for any errors.')
+
+    }
+</script>

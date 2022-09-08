@@ -1,5 +1,10 @@
 # threaded-ia-downloader
 Threaded Internet Archive Downloader with Web interface.
+Credits:
+
+https://codepen.io/comehope/pen/eKqZjy
+
+
 <br>**Install instructions**
 <br>This requires some basic linux knowledge!!!
 
